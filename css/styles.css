@@ -1,9 +1,21 @@
+#container {
+  margin-left:20px;
+}
+
 #tnmap {
-  height:580px;
-  width:700px;
-  display:hidden;
+  height:600px;
+  width:750px;
+  float:left;
+  margin:10px;
 }
 
 #usamap {
   height:600px;
+  width:750px;
+  float:left;
+  margin:10px;
+}
+
+h1 {
+  text-align:center;
 }

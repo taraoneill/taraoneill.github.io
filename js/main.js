@@ -1,8 +1,5 @@
-//$(document).ready(function(){
-  
-  var gmap;
-  //var myLatlng = {lat:36.850239, lng:-76.285802};
-  function initMap() {
+var gmap;
+function initMap() {
     gmap = new google.maps.Map(document.getElementById('tnmap'), {
         center: {lat: 40.663767, lng: -95.685564},
         zoom:4,
@@ -10,7 +7,7 @@
     });
 
   var locations = [
-  //Florida
+    //Florida
     {name:'Sundowners Restaurant', notes: 'Dock Cat and the best frozen drinks in Key Largo.', lat:25.144086, lng:-80.398622},
     {name:'Senor Frijoles Restaurant', notes: 'Friendly, but homophobic waitstaff', lat:25.143527, lng: -80.397810},
     {name: "Mangove Mike's Cafe Breakfast", notes: "Second best breakfast in the Keys", lat:24.923507, lng: -80.629497},
@@ -105,7 +102,7 @@
       });
     }
 
-  AmCharts.ready(function(){
+ AmCharts.ready(function(){
     var map = new AmCharts.AmMap();
       map.pathToImages = "ammap/images/";
 
@@ -119,9 +116,9 @@
                 {id:"US-CA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-CO", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-CT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-DC", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7", coordinate: "lat: 38.9010, lng: -77.0239"},
+                {id:"US-DC", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
                 {id:"US-DE", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-FL", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7", coordinate: 'lat: 25.1417, lng: -80.3998'},
+                {id:"US-FL", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
                 {id:"US-GA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-HI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-IA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
@@ -131,7 +128,7 @@
                 {id:"US-KS", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-KY", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-LA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MA", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7", coordinate: "lat: 42.3499, lng: -71.0760"},
+                {id:"US-MA", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"false", selectedColor:"#E1BEE7"},
                 {id:"US-MD", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-ME", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-MI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
@@ -143,10 +140,10 @@
                 {id:"US-ND", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-NE", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-NH", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NJ", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7", coordinate: "lat: 40.6058, lng: -74.2726"},
+                {id:"US-NJ", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
                 {id:"US-NM", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-NV", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NY", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7", myLatlng: '{lat: 40.7127, lng: -74.}'},
+                {id:"US-NY", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
                 {id:"US-OH", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-OK", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-OR", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
@@ -154,10 +151,10 @@
                 {id:"US-RI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-SC", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-SD", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-TN", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"false", selectedColor:"#E1BEE7", coordinate: "lat: 35.7144, lng: -83.5114"},
+                {id:"US-TN", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
                 {id:"US-TX", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-UT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-VA", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7", coordinate: "lat: 36.8452, lng: -76.2899"},
+                {id:"US-VA", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
                 {id:"US-VT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-WA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
                 {id:"US-WI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
@@ -212,5 +209,4 @@
 
   })
 }
-
 
