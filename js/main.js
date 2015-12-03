@@ -1,31 +1,31 @@
 var gmap;
 function initMap() {
     gmap = new google.maps.Map(document.getElementById('tnmap'), {
-        center: {lat: 40.663767, lng: -95.685564},
-        zoom:4,
+        center: {lat: 41.232085, lng: -110.858465},
+        zoom:3,
         scroll:false,      
     });
 
   var locations = [
     //Florida
     {name:'Sundowners Restaurant', notes: 'Dock Cat and the best frozen drinks in Key Largo.', lat:25.144086, lng:-80.398622},
-    {name:'Senor Frijoles Restaurant', notes: 'Friendly, but homophobic waitstaff', lat:25.143527, lng: -80.397810},
+    {name:'Senor Frijoles Restaurant', notes: 'The food was okay, but the waitstaff was homophobic', lat:25.143527, lng: -80.397810},
     {name: "Mangove Mike's Cafe Breakfast", notes: "Second best breakfast in the Keys", lat:24.923507, lng: -80.629497},
-    {name: "Anne's Beach", notes: "Beautiful Sunrises, knee deep water, but watch out for sand fleas!", lat:24.848723, lng: -80.741119},
+    {name: "Anne's Beach", notes: "Beautiful Sunrise, knee deep water, but watch out for sand fleas!", lat:24.848723, lng: -80.741119},
     {name: "Everglade's National Park, Anhinga Trail", notes: "Best place in the park to see alligators!", lat:25.382897,lng: -80.607231},
     {name: "Doc's Diner Breakfast", notes: "Best breakfast in the Keys!", lat: 25.096115, lng:-80.439242},
     {name: "Marriott Key Largo Bay Resort", notes: "Our favorite place to stay", lat:25.142069, lng: -80.400272},
     {name: "Sloppy Joe's", notes: "Best place to eat with live entertainment!", lat:24.559095, lng: -81.804972},
     {name: "Southern Most Point in the US", notes: "Cannot see Cuba from here", lat:24.546645, lng: -81.797371},
-    {name: "Zachary Taylor State Park", notes: "Bring your Snorkel!", lat:24.546020, lng: -81.811190},
+    {name: "Zachary Taylor State Park", notes: "Bring your snorkel!", lat:24.546020, lng: -81.811190},
     {name: "Flying Monkeys", notes: "Mostly frozen drinks", lat:24.558350, lng: -81.804431},
-    {name: "Rendezvous Restaurant and Pub", notes: "200+ Craft Beer, esp Banana Bread Beer", lat: 29.894462, lng: -81.313170},
+    {name: "Rendezvous Restaurant and Pub", notes: "200+ Craft Beer, including Well's Banana Bread Beer", lat: 29.894462, lng: -81.313170},
     {name: "The Floridian Restaurant", notes: "Best food in Florida! Vegetarian/Vegan friendly", lat:29.894025, lng: -81.313800},
     {name: "Castillo de San Marcos National Monument", notes: "An old Fort with breathtaking harbor views", lat:29.897880, lng: -81.311208},
     {name: "St. Augustine Light House", notes: "Great historical visit, especially the artifact restoration", lat:29.885459, lng: -81.288397},
     {name: "Casa Monica Marriott", notes: "Where we stayed, beautiful and historic", lat:29.891876, lng: -81.313526},
     //Washington DC
-    {name: "National Building Museum", notes:"We saw 'The Beach' exhibhit, summer 2015", lat:38.897754, lng: -77.017671},
+    {name: "National Building Museum", notes:"We saw 'The Beach' exhibit, summer 2015", lat:38.897754, lng: -77.017671},
     {name: "Gordon Biersch", notes: "Craft Beer", lat:38.896901, lng:-77.024119},
     {name: "Courtyard Washington Convention Center", notes: "Where we stayed, used to be a bank", lat:38.897023, lng: -77.024542},
     //New Jersey
@@ -41,8 +41,8 @@ function initMap() {
     {name: "Belasco Theatre", notes: "Where we saw 'Hedwig and the Angry Inch' Jan 11, 2015", lat: 40.756630, lng: -73.983809},
     {name: "Rice to Riches", notes: "Rice Pudding!", lat:40.722074, lng: -73.995739},
     {name: "Jaqueline Kennedy Onassis Reservoir", notes: "In Central Park", lat: 40.786053, lng: -73.963921},
-    {name: "Washington Square Arch", lat:40.731207, lng: -73.997136},
-    {name: "Pine Box Rock Shop", note: "Vegan Bar, bring your dog!", lat:40.705545, lng: -73.932448},
+    {name: "Washington Square Arch", notes: "Just like the Ghostbusters movie", lat:40.731207, lng: -73.997136},
+    {name: "Pine Box Rock Shop", notes: "Vegan Bar, bring your dog!", lat:40.705545, lng: -73.932448},
     {name: "Jeremy's Ale House", notes: "Bras on the wall", lat:40.707805, lng: -74.002161},
     {name: "Music Hall of Williamsburg", notes: "We saw Alkaline Trio here on October 24, 2014", lat:40.719180, lng: -73.961538 },
     {name: "Pasticceria Bruno Cafe", notes: "Delicious Village Desserts, closed in 2015", lat: 40.727714, lng: -73.999527},
@@ -66,7 +66,7 @@ function initMap() {
     {name: "Ramsey Cascades", notes: "8 mile hike to a stunning waterfall", lat:35.702675, lng: -83.357762},
     //Virginia
     {name: "Renaissance Portsmouth-Norfolk Waterfront Hotel", notes: "Where we stayed in Norfolk", lat:36.837532, lng: -76.296339},
-    {name: "Roger Brown's Restaurant and Sports Bar", lat: 36.835437, lng: -76.300244}
+    {name: "Roger Brown's Restaurant and Sports Bar", notes: "Great bar, open late!", lat: 36.835437, lng: -76.300244}
     ]
 
     locations.forEach(function(element, index, array) {
@@ -109,57 +109,57 @@ function initMap() {
       var dataProvider = {
         map: "usaLow",
         //getAreasFromMap:true,
-        areas: [{id:"US-AK", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-AL", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"}, 
-                {id:"US-AR", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"}, 
-                {id:"US-AZ", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-CA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-CO", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-CT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-DC", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
-                {id:"US-DE", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-FL", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
-                {id:"US-GA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-HI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-IA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-ID", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-IL", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-IN", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-KS", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-KY", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-LA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MA", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"false", selectedColor:"#E1BEE7"},
-                {id:"US-MD", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-ME", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MN", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MO", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MS", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-MT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NC", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-ND", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NE", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NH", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NJ", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
-                {id:"US-NM", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NV", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-NY", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
-                {id:"US-OH", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-OK", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-OR", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-PA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-RI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-SC", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-SD", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-TN", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
-                {id:"US-TX", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-UT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-VA", color:"#7B1FA2", rollOverColor:"#9C27B0", outlineColor:"#000000", rollOverOutlineColor:"#FFFFFF", selectable:"true", autoZoom:"true", selectedColor:"#E1BEE7"},
-                {id:"US-VT", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-WA", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-WI", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-WV", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"},
-                {id:"US-WY", color:"#727272", outlineColor:"#212121", rollOverOutlineColor:"#FFFFFF", selectable:"true"}],
+        areas: [{id:"US-AK", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-AL", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"}, 
+                {id:"US-AR", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"}, 
+                {id:"US-AZ", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-CA", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-CO", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-CT", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-DC", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-DE", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-FL", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-GA", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-HI", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-IA", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-ID", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-IL", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-IN", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-KS", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-KY", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-LA", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-MA", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-MD", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-ME", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-MI", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-MN", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-MO", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-MS", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-MT", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-NC", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-ND", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-NE", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-NH", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-NJ", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-NM", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-NV", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-NY", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-OH", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-OK", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-OR", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-PA", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-RI", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-SC", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-SD", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-TN", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-TX", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-UT", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-VA", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-VT", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-WA", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-WI", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-WV", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
+                {id:"US-WY", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"}],
           
       };
 
@@ -197,7 +197,7 @@ function initMap() {
       gmap.setZoom(9);
     } else if (event.mapObject.id === "US-FL") {
       gmap.setCenter ({lat: 28.090055, lng: -80.601035});
-      gmap.setZoom(6);
+      gmap.setZoom(6);      
     } else {
       gmap.setCenter ({lat: 40.616608, lng: -101.713926});
       gmap.setZoom (5);
@@ -209,4 +209,19 @@ function initMap() {
 
   })
 }
+
+$(document).ready(function() {
+  $(".jquery h1").prepend("<span></span>");
+
+  $( "#usamap" ).click(function( event ) {
+  event.preventDefault();
+  $( this ).hide("slow");
+  $("#return").toggle();
+  //$("#tnmap").
+});
+  $("#return").click(function() {
+    location.reload();
+  });
+
+});
 

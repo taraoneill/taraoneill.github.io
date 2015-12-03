@@ -7,12 +7,25 @@
   <link rel="stylesheet" type="text/css" href= "css/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/styles.css" />
 <body>
-  <div id = "container">
-    <h1>Travel Trail</h1>
+    <div class = "headwrapper">
+      <h1>Travel Trail</h1>
+    </div>
+
+  <div id = "container">  
+    <div id = "directions">
+      <p>
+        Select a <span>green</span> state below.  Google maps will zoom in to show the places we've visited.  
+        </br>
+        States that are grey have not been visited...yet.
+      </p>
+      <button id="return"> Show both Maps again </button>
+    </div>
+
     <div id="usamap"></div>
 
     <div id="tnmap"></div>
   </div>
+    
 <script src="js/jquery-2.1.4.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZ0z3qV-feFX3U3b-yChGn3KuDvZDaOWY&callback=initMap" async defer></script>
 <script src="js/ammap.js" type="text/javascript"></script>
