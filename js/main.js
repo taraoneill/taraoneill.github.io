@@ -6,7 +6,7 @@ function initMap() {
         scroll:false,      
     });
 
-  var locations = [
+   var locations = [
     //Florida
     {name:'Sundowners Restaurant', notes: 'Dock Cat and the best frozen drinks in Key Largo.', lat:25.144086, lng:-80.398622},
     {name:'Senor Frijoles Restaurant', notes: 'The food was okay, but the waitstaff was homophobic', lat:25.143527, lng: -80.397810},
@@ -102,6 +102,8 @@ function initMap() {
       });
     }
 
+
+
  AmCharts.ready(function(){
     var map = new AmCharts.AmMap();
       map.pathToImages = "ammap/images/";
@@ -143,7 +145,7 @@ function initMap() {
                 {id:"US-NJ", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
                 {id:"US-NM", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
                 {id:"US-NV", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
-                {id:"US-NY", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"false", selectedColor:"#FF7940"},
+                {id:"US-NY", color:"#36D695", rollOverColor:"#FF7940", outlineColor:"#000000", rollOverOutlineColor:"#FF7940", selectable:"true", autoZoom:"true", selectedColor:"#FF7940"},
                 {id:"US-OH", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
                 {id:"US-OK", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},
                 {id:"US-OR", color:"#B8B8B8", outlineColor:"#212121", rollOverOutlineColor:"#FF7940", selectable:"true"},

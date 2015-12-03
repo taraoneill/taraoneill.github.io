@@ -2,6 +2,7 @@ body {
   box-sizing:border-box;
   background-color: #484848;
   font-family: Verdana, "Geneva", sans-serif;
+  color:#000;
  }
 
 #container {
@@ -56,7 +57,7 @@ br {
   padding:10px;
 }
 
-span {
+#green {
   color:#36D695;
 }
 
